@@ -151,10 +151,10 @@ for (i=0; i<products.length; i++){
   category.innerText=products[i].category
   main.appendChild(category)
 
-  let price = document.createElement('strong')
-  price.className='product-price'
-  price.innerText=products[i].price
-  main.appendChild=(price)
+  let preco = document.createElement('strong')
+  preco.className='product-price'
+  preco.innerText=`R$ ${products[i].price}`
+  main.appendChild(preco)
 
 
   //definir seções

@@ -88,3 +88,89 @@ const products = [
     imageDescription: "",
   },
 ];
+
+for (i=0; i<products.length; i++){
+  if(products[i].image == undefined){
+    products[i].image = "./img/products/no-img.svg"
+  }
+}
+
+
+
+
+
+
+//repetição
+let listaDeProdutos = document.getElementsByTagName('ul')
+let fruits = document.getElementsByTagName('ul')[0]
+let drinks = document.getElementsByTagName('ul')[1]
+let hygiene = document.getElementsByTagName('ul')[2]
+
+
+for (i=0; i<products.length; i++){
+  //crianlo o elemento
+  let product = document.createElement('li')
+
+  product.className=('product')
+
+
+  if(products[i].category == 'Frutas'){
+    fruits.appendChild(product)
+  }
+  else if (products[i].category == 'Bebidas'){
+    drinks.appendChild(product)
+  }
+  else if (products[i].category == 'Higiene'){
+    hygiene.appendChild(product)
+  }
+
+  
+
+  //criando o img
+  let img = document.createElement('img')
+  img.className='product-img'
+  img.src=products[i].image
+  product.appendChild(img)
+
+  //criando main
+
+
+  let main = document.createElement('main')
+  main.className=('product-main')
+  product.appendChild(main)
+
+  //add elementos ao main
+
+  let title = document.createElement('h1')
+  title.className=('product-title')
+  title.innerText=products[i].title
+  main.appendChild(title)
+
+  let category = document.createElement('h5')
+  category.className='product-category'
+  category.innerText=products[i].category
+  main.appendChild(category)
+
+  let price = document.createElement('strong')
+  price.className='product-price'
+  price.innerText=products[i].price
+  main.appendChild=(price)
+
+
+  //definir seções
+
+  
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
